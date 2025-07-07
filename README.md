@@ -13,7 +13,7 @@
 
 <br/>
 
-## Introction
+## Introduction
 This is POrca-Team’s first decentralized project. We’re passionate about peer-to-peer sharing of structured data, which inspired us to create Picorca. Our platform achieves a critical milestone: reliable, stable sharing of structured data. Building on this foundation, we plan to unlock even more possibilities in the future.
 
 A special acknowledgment to the n0-computer team for developing [Iroh](https://github.com/n0-computer/iroh), which played a pivotal role in helping us realize our initial vision.

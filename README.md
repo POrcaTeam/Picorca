@@ -39,3 +39,10 @@ Instantly translate any text or image-based content with our integrated AI-power
 
 ## Getting Started
 Visit [Picorca's website](https://picorca.com) to learn more about Picorca and to get started.
+
+### Community
+
+For additional help, share your issue in [the repo's GitHub Discussions](https://github.com/POrcaTeam/Picorca/discussions/new?category=help).
+
+### FeedBack
+Tell us more about it below. Our representative will get in touch with you as soon as possible. [FeedBack](https://picorca.com/feedback-form).

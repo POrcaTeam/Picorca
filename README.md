@@ -12,3 +12,30 @@
 <p align="center">P2P-Based Image Collaboration Software</p>
 
 <br/>
+
+## Introction
+This is POrca-Team’s first decentralized project. We’re passionate about peer-to-peer sharing of structured data, which inspired us to create Picorca. Our platform achieves a critical milestone: reliable, stable sharing of structured data. Building on this foundation, we plan to unlock even more possibilities in the future.
+
+A special acknowledgment to the n0-computer team for developing [Iroh](https://github.com/n0-computer/iroh), which played a pivotal role in helping us realize our initial vision.
+
+## Features
+1. Secure Data Sharing
+Combining online identity verification with local encryption to ensure private content remains protected, whether shared within teams or publicly.
+
+2. Seamless Cross-Platform Access
+Enjoy instant synchronization and high-speed access across all your devices—mobile, tablet, or desktop.
+
+3. Developer-Friendly API
+Our comprehensive open API accelerates integration, supporting data uploads, sharing, and access management. Perfect for connecting AI toolchains and securely storing AI-generated outputs.
+
+4. Real-Time Team Collaboration
+Multiple users can connect simultaneously to collaboratively view and edit data in real time.
+
+5. Flexible Project Management
+Organize projects effortlessly based on specific needs or workflows, with full control over both shared and personal projects.
+
+6. Built-In Multilingual AI Translation
+Instantly translate any text or image-based content with our integrated AI-powered multilingual support.
+
+## Getting Started
+Visit [Picorca's website](https://picorca.com) to learn more about Picorca and to get started.

@@ -47,4 +47,7 @@ For additional help, share your issue in [the repo's GitHub Discussions](https:/
 ### FeedBack
 Tell us more about it below. Our representative will get in touch with you as soon as possible. [FeedBack](https://picorca.com/feedback-form).
 
+## i8n
+We have hosted a translation project that will be updated regularly
+https://crowdin.com/project/picorca
 ## Download

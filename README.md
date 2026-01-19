@@ -47,6 +47,27 @@ For additional help, share your issue in [the repo's GitHub Discussions](https:/
 ### FeedBack
 Tell us more about it below. Our representative will get in touch with you as soon as possible. [FeedBack](https://picorca.com/feedback-form).
 
+## System Requirements
+
+### Platform
+
+- **macOS 13 (Ventura) or later**
+
+### Supported Hardware
+
+- **Intel-based Macs (x86_64)**
+- **Apple Silicon Macs (ARM64 — M1, M2, M3 series)**
+
+### Compatibility
+
+- This application is currently available **exclusively for macOS**.
+- Both Intel and Apple Silicon architectures are fully supported.
+
+### Upcoming Platform Support
+
+- **Windows support is planned for a future release.**
+- Linux and other platforms are not supported at this time.
+
 ## i8n
 We have hosted a translation project that will be updated regularly
 https://crowdin.com/project/picorca

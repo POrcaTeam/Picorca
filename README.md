@@ -1,74 +1,129 @@
-
 <p align="center">
   <a href="https://picorca.com/">
-    <picture>
-      <img src="https://github.com/user-attachments/assets/7bcf4baa-e2eb-4854-87c4-680b5eb02137" alt="Picorca" width="400" />
-    </picture>
-    
+    <img src="https://github.com/user-attachments/assets/7bcf4baa-e2eb-4854-87c4-680b5eb02137" alt="Picorca" width="400" />
   </a>
-  
 </p>
 
-<p align="center">P2P-Based Image Collaboration Software</p>
+<p align="center">
+  <strong>A private, peer-to-peer workspace for image assets and creative collaboration.</strong>
+</p>
 
-<br/>
+<p align="center">
+  <a href="https://picorca.com/">Website</a> ·
+  <a href="https://github.com/POrcaTeam/Picorca/releases">Download</a> ·
+  <a href="https://github.com/POrcaTeam/Picorca/discussions">Community</a> ·
+  <a href="https://picorca.com/feedback-form">Feedback</a>
+</p>
 
-## Introduction
-This is POrca-Team’s first decentralized project. We’re passionate about peer-to-peer sharing of structured data, which inspired us to create Picorca. Our platform achieves a critical milestone: reliable, stable sharing of structured data. Building on this foundation, we plan to unlock even more possibilities in the future.
+---
 
-A special acknowledgment to the n0-computer team for developing [Iroh](https://github.com/n0-computer/iroh), which played a pivotal role in helping us realize our initial vision.
+## Overview
+
+Picorca is a desktop application for organizing, sharing, and collaborating on image assets without making a centralized cloud service the source of truth. Your project stays on your device; when you choose to collaborate, Picorca uses peer-to-peer networking to connect authorized participants and synchronize the work that belongs to the shared project.
+
+It is built for designers, creative teams, and AI-assisted workflows that need an image library that is both easy to browse and under the team's control. Create a project, import assets, organize them with folders and tags, then share the project with the people who need access.
+
+Picorca is developed by POrca Team. We are grateful to the [Iroh](https://github.com/n0-computer/iroh) team, whose networking technology helps make our peer-to-peer vision possible.
+
+## Why Picorca
+
+|                                | What it means                                                                                                   |
+| ------------------------------ | --------------------------------------------------------------------------------------------------------------- |
+| **Local-first ownership**      | Projects and assets live locally, giving you control over where your work is stored.                            |
+| **Peer-to-peer collaboration** | Share projects directly with authorized collaborators instead of moving your library into a central repository. |
+| **Built for visual work**      | Browse, search, tag, preview, edit, and export image assets from one desktop workspace.                         |
+| **Ready for AI workflows**     | Let AI clients work with the current project through a local MCP server.                                        |
 
 ## Features
-1. Secure Data Sharing
-Combining online identity verification with local encryption to ensure private content remains protected, whether shared within teams or publicly.
 
-2. Seamless Cross-Platform Access
-Enjoy instant synchronization and high-speed access across all your devices—mobile, tablet, or desktop.
+### Organize a growing asset library
 
-3. Developer-Friendly API
-Our comprehensive open API accelerates integration, supporting data uploads, sharing, and access management. Perfect for connecting AI toolchains and securely storing AI-generated outputs.
+- Import image assets and preserve a clear folder structure.
+- Use folders, tags, metadata, previews, and search to find the right asset quickly.
+- Inspect image information and AI-related metadata in the app.
+- Export selected assets back to disk when you need them elsewhere.
 
-4. Real-Time Team Collaboration
-Multiple users can connect simultaneously to collaboratively view and edit data in real time.
+### Collaborate without giving up control
 
-5. Flexible Project Management
-Organize projects effortlessly based on specific needs or workflows, with full control over both shared and personal projects.
+- Create personal or shared projects based on your workflow.
+- Invite collaborators with a share ticket and synchronize project content in real time.
+- Support direct peer connections, with relay assistance available for complex networks.
+- Keep access credentials private: anyone with a share ticket may be able to join the associated project.
 
-6. Built-In Multilingual AI Translation
-Instantly translate any text or image-based content with our integrated AI-powered multilingual support.
+### Work across your creative toolchain
 
-## Getting Started
-Visit [Picorca's website](https://picorca.com) to learn more about Picorca and to get started.
+- Edit and manage assets in a dedicated desktop environment.
+- Use built-in multilingual translation for text and image-based content.
+- Use semantic image search to explore visually similar assets.
+- Configure asset output and compression preferences to better manage local storage.
 
-### Community
+## MCP for AI-assisted asset workflows
 
-For additional help, share your issue in [the repo's GitHub Discussions](https://github.com/POrcaTeam/Picorca/discussions/new?category=help).
+Picorca includes a [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server so local AI clients—such as Codex—can work with the project currently open in Picorca. This makes generated assets part of the same organized library as the rest of your work, rather than leaving them scattered across downloads and temporary folders.
 
-### FeedBack
-Tell us more about it below. Our representative will get in touch with you as soon as possible. [FeedBack](https://picorca.com/feedback-form).
+With MCP enabled, an AI client can:
 
-## System Requirements
+- Inspect the current project, folders, tags, supported asset types, and asset metadata.
+- Search image assets, including vector-based similarity search where available.
+- Import one or multiple generated assets into the current project.
+- Create folders, add tags, and move assets to keep the library organized.
+- Read asset previews and metadata for use in downstream creative workflows.
 
-### Platform
+### Connect an MCP client
 
-- **macOS 13 (Ventura) or later**
+1. Open a project in Picorca.
+2. Go to **Settings → MCP Service** and turn on **Enable MCP**.
+3. Copy the generated **MCP Config** into your MCP client's configuration.
+4. Keep Picorca running while the client uses the project.
 
-### Supported Hardware
+Picorca serves MCP only on your local machine at `127.0.0.1` and requires the generated Bearer token. Treat that token like a password and refresh it from Settings if it is ever exposed. You can also enable **Read-only Mode** to let a client inspect assets without allowing imports, tagging, or moves.
 
-- **Intel-based Macs (x86_64)**
-- **Apple Silicon Macs (ARM64 — M1, M2, M3 series)**
+The configuration shown in Picorca follows this shape; use the exact URL and token that the app provides:
 
-### Compatibility
+```json
+{
+  "mcpServers": {
+    "picorca": {
+      "url": "http://127.0.0.1:<port>/mcp",
+      "headers": {
+        "Authorization": "Bearer <your-token>"
+      }
+    }
+  }
+}
+```
 
-- This application is currently available **exclusively for macOS**.
-- Both Intel and Apple Silicon architectures are fully supported.
+## Getting started
 
-### Upcoming Platform Support
+1. Download and install the latest version from [GitHub Releases](https://github.com/POrcaTeam/Picorca/releases).
+2. Launch Picorca and create a project, or open an existing one.
+3. Drag files or folders into the project to import them.
+4. Organize assets with folders and tags, then share a project when you are ready to collaborate.
 
-- **Windows support is planned for a future release.**
-- Linux and other platforms are not supported at this time.
+For product updates and guides, visit [picorca.com](https://picorca.com/).
 
-## i8n
-We have hosted a translation project that will be updated regularly
-https://crowdin.com/project/picorca
-## Download
+## Platform availability
+
+| Platform                        | Status                                                                       |
+| ------------------------------- | ---------------------------------------------------------------------------- |
+| **macOS 13 (Ventura) or later** | Available now — Intel (x86_64) and Apple Silicon (ARM64) Macs are supported. |
+| **Windows**                     | Planned for a future release.                                                |
+| **Linux**                       | Not currently supported.                                                     |
+
+We will share Windows availability through [GitHub Releases](https://github.com/POrcaTeam/Picorca/releases) and the [Picorca website](https://picorca.com/). No release date has been announced yet.
+
+
+## Community and feedback
+
+- Need help or want to share an idea? Start a conversation in [GitHub Discussions](https://github.com/POrcaTeam/Picorca/discussions/new?category=help).
+- Found a problem? Please open a clear issue with steps to reproduce it.
+- Have product feedback? Send it through the [feedback form](https://picorca.com/feedback-form).
+- Help improve translations on [Crowdin](https://crowdin.com/project/picorca).
+
+## Roadmap
+
+We are continuing to improve peer-to-peer collaboration, asset organization, AI-assisted workflows, and language support. Windows support is planned; timing and scope will be announced when ready.
+
+## Security note
+
+Picorca provides local-first and peer-to-peer capabilities, but the safety of shared work also depends on how you manage access. Share tickets and MCP tokens grant access to project resources—send them only through channels you trust, and rotate MCP tokens if needed.
